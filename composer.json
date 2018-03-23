@@ -1,5 +1,5 @@
 {
-  "name": "doing/exceptionfromtp",
+  "name": "doing/extp",
   "description": "基于ThinkPHP5的异常类",
   "keywords": ["TP5","exception","异常"],
   "type": "library",
