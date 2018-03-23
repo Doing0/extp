@@ -1,0 +1,20 @@
+{
+  "name": "doing/exceptionfromtp",
+  "description": "基于ThinkPHP5的异常类",
+  "keywords": ["TP5","exception","异常"],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Doing",
+      "email": "vip.dulin@gmail.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "exceptionfromtp\\lib\\": "src"
+    }
+  }
+
+}
