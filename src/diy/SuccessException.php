@@ -5,7 +5,8 @@
  * User: Doing <vip.dulin@gmail.com>
  * Desc:成功异常类:用于操作成功时(比如删除成等)
  */
-namespace exceptionfromtp\lib;
+namespace extp\diy;
+use extp\core\BaseException;
 class SuccessException extends BaseException {
     //HTTP 状态码：400，200，500...
     public $code = 200;

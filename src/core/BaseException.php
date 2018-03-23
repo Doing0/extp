@@ -7,7 +7,7 @@
  */
 
 
-namespace exceptionfromtp\lib;
+namespace extp\core;
 use think\Exception;
 class BaseException extends Exception {
     //HTTP 状态码：400，200，500...

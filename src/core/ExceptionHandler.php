@@ -11,7 +11,7 @@
  */
 
 
-namespace exceptionfromtp\lib;
+namespace extp\core;
 use think\Log;
 
 class ExceptionHandler extends Handle {

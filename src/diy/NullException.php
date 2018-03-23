@@ -5,7 +5,8 @@
  * User: Doing <vip.dulin@gmail.com>
  * Desc:查找数据为空时抛出的异常
  */
-namespace exceptionfromtp\lib;
+namespace extp\diy;
+use extp\core\BaseException;
 class NullException extends BaseException {
     //HTTP 状态码：400，200，500...
     public $code = 404;

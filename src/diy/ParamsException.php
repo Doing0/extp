@@ -5,7 +5,9 @@
  * User: Doing <vip.dulin@gmail.com>
  * Desc:客户端请求参数错误:数据验证每通过时抛出的异常
  */
-namespace exceptionfromtp\lib;
+namespace extp\diy;
+use extp\core\BaseException;
+
 class ParamsException extends BaseException {
     //HTTP 状态码：400，200，500...
     public $code = 400;
