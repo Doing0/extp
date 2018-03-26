@@ -1,8 +1,6 @@
 # 使用说明
 
 ## 介绍
-![abc](abc/1.png)
-
 > 1.  是基于ThinkPHP5(下简写TP5)重写的抛出异常类，故只能用于TP5内部不能适用于其他框架
 > 2.  请用composer安装此包
 > 3.  安装命令：`composer require doing/extp dev-master`
