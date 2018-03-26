@@ -12,6 +12,7 @@
 
 
 namespace extp\core;
+use think\exception\Handle;
 use think\Log;
 
 class ExceptionHandler extends Handle {
