@@ -13,20 +13,24 @@
 
 使用场景一:快速抛出异常
 
-    <span class="hljs-comment">//直接New一个doing/extp/src/diy下的自定义异常对象快速抛出异常</span>
-    <span class="hljs-function"><span class="hljs-keyword">throw</span> New <span class="hljs-title">NullException</span><span class="hljs-params">()</span></span>;  
-    说明:取对象类的默认属性值:msg，error_code,code
-    `</pre>
+```
+//直接New一个doing/extp/src/diy下的自定义异常对象快速抛出异常
+throw New  NullException();  
+说明:取对象类的默认属性值:msg，error_code,code
+```
+使用场景二:自定义返回信息
+```
+$exceptions['msg'] = '我是提示信息';
+$exceptions['error_code'] = '40000'//自定义错误码
+exceptions['code'] = '401'//http的状态码
+throw New NullException($exceptions);
+说明:自定义类有三个属性:需要更改哪一个就传哪一个，如果只修改提示信息msg其他信息就使类内的默认值,那就就只需要传$exceptions['msg']
+以上代码可以简写throw New NullException(['msg'=>'我是提示信息','error_code'=>'4000'])
 
-    使用场景二:自定义返回信息
+使用时不建议修改code属性,因为是基于http的状态码封装的
+```
 
-    <pre>`<span class="hljs-variable">$exceptions</span>[<span class="hljs-string">'msg'</span>] = <span class="hljs-string">'我是提示信息'</span>;
-    <span class="hljs-variable">$exceptions</span>[<span class="hljs-string">'error_code'</span>] = <span class="hljs-string">'40000'</span>;<span class="hljs-comment">//自定义错误码</span>
-    <span class="hljs-variable">$exceptions</span>[<span class="hljs-string">'code'</span>] = <span class="hljs-string">'401'</span>;<span class="hljs-comment">//http的状态码</span>
-    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">New</span> NullException(<span class="hljs-variable">$exceptions</span>);
-    说明:自定义类有三个属性:需要更改哪一个就传哪一个，如果只修改提示信息msg其他信息就使类内的默认值,那就就只需要传<span class="hljs-variable">$exceptions</span>[‘msg’]
-    以上代码可以简写
-    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">New</span> NullException([<span class="hljs-string">'msg'</span>=><span class="hljs-string">'我是提示信息'</span>,<span class="hljs-string">'error_code'</span>=><span class="hljs-string">'40000'</span>]);
+  
 
 自定义类的封装
 
