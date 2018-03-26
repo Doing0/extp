@@ -8,9 +8,10 @@
 > 4.  请先更改TP5的配置选项引入此类（在application/config.php里面搜索`exception_handle`,默认值是空修改成`'exception_handle' => '\extp\core\ExceptionHandler',`
 > 5. 返回信息说明
  ~~~
- msg: "我是提示信息",//提示信息
- error_code: "40000",//自定义错误码
- request_url: "/credits/public/index.php/api/index/index"//请求地址
+{ 
+     msg: "我是提示信息",//提示信息
+     error_code: "40000",//自定义错误码
+     request_url: "/credits/public/index.php/api/index/index"//请求地址
  }
  说明:http的状态码code是提现在header上
  ~~~
