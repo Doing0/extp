@@ -13,9 +13,7 @@
   "require": {},
   "autoload": {
     "psr-4": {
-      "extp\\core\\": "src/core",
-      "extp\\diy\\": "src/diy",
-      "extp\\enum\\": "src/enum"
+      "extp\\core\\": "src"
     }
   }
 

@@ -40,8 +40,7 @@ throw New NullException($exceptions);
 自定义类的封装
 
 > 1.  建议按Http的状态码分类封装:如NullExcption就代码的是抛出http状态码为404异常:用于查找无数据等情况抛出
-> 2.  自定义错误类放在doing/extp/src/diy文件夹下
-> 3.  建议直接复制我已封装的类进行修改
+> 2.  自定义错误类放在application/lib/exception(在application下创建一个文件夹lib,把下载的doing/extp/exception的`exception`文件夹剪切到以上目录的`lib`下)
+> 3.  建议直接复制我已封装的类进行修改(doing/extp/exception里面的文件)
 > 4.  3中主要修改地方:文件名和类名保持一直且采用驼峰命名首字母大写全部采用Exception结尾。修改三个对应属性值code,msg,errorCode
-> 5.  已封装的3个自定义类说明:NullException(用于404异常及查找无数据等)，ParamsException(用于客户端请求的参数错误异常),SuccessException(用于操作成功如删除成功等操作)
->6. 主要说下`ServiceException`类的使用:如果code给600就是抛出第三方的错误:比如调用微信支付时第三方给的错误异常，如果code给500就是我们自己服务器的错误
+> 5.  已封装的4个自定义类说明:NullException(用于404异常及查找无数据等)，ParamsException(用于客户端请求的参数错误异常),SuccessException(用于操作成功如删除成功等操作)，主要说下`ServiceException`类的使用:如果code给600就是抛出第三方的错误:比如调用微信支付时第三方给的错误异常，如果code给500就是我们自己服务器的错误
