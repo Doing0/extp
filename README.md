@@ -5,16 +5,6 @@
 > 2.  请用composer安装此包
 > 3.  安装命令：`composer require doing/extp 版本号`。例`composer require doing/extp 1.*`
 > 4.  请先更改TP5的配置选项引入此类（在application/config.php里面搜索`exception_handle`,默认值是空修改成`'exception_handle' => '\extp\core\ExceptionHandler',`
-> 5. 返回信息说明
- ~~~
-{ 
-     msg: "我是提示信息",//提示信息
-     error_code: "40000",//自定义错误码
-     request_url: "/credits/public/index.php/api/index/index"//请求地址
- }
- 说明:http的状态码code是提现在header上
- ~~~
-
 ## 使用步骤
 
 > 前提：必须引用对应的类如:`use extp\diy\NullException;`
@@ -22,9 +12,16 @@
 使用场景一:快速抛出异常
 
 ```
-//直接New一个doing/extp/src/diy下的自定义异常对象快速抛出异常
-throw New  NullException();  
+//直接New一个application/lib/exception/下的自定义异常对象快速抛出异常
+throw New NullException();  
 说明:取对象类的默认属性值:msg，error_code,code
+返回的信息
+{ 
+     msg: "我是提示信息",//提示信息
+     error_code: "40000",//自定义错误码
+     request_url: "/credits/public/index.php/api/index/index"//请求地址
+ }
+ 说明:http的状态码code是提现在header上
 ```
 使用场景二:自定义返回信息
 ```
